@@ -15,7 +15,8 @@ namespace aurm.notifier
 
         public string PhoneNumber { get; private set; }
 
-        public SMSRecipient(string phoneNumber)
+        public SMSRecipient(string name, string phoneNumber)
+            : base(name)
         {
             phoneNumber.ThrowIfNull(nameof(phoneNumber));
 
