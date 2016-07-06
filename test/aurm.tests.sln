@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aurm.core.tests", "aurm.cor
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aurm.core", "..\src\aurm.core\aurm.core.csproj", "{EA7337AF-0FE9-4B7B-93ED-F2A8AE740D4E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aurm.notifier", "..\src\aurm.notifier\aurm.notifier.csproj", "{52F04A61-1161-45E0-B973-6094FDDEA8F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aurm.notifier.tests", "aurm.notifier.tests\aurm.notifier.tests.csproj", "{B061E86F-BD1A-42F0-AE07-1E74F77B260F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{EA7337AF-0FE9-4B7B-93ED-F2A8AE740D4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA7337AF-0FE9-4B7B-93ED-F2A8AE740D4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA7337AF-0FE9-4B7B-93ED-F2A8AE740D4E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52F04A61-1161-45E0-B973-6094FDDEA8F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52F04A61-1161-45E0-B973-6094FDDEA8F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52F04A61-1161-45E0-B973-6094FDDEA8F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52F04A61-1161-45E0-B973-6094FDDEA8F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B061E86F-BD1A-42F0-AE07-1E74F77B260F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B061E86F-BD1A-42F0-AE07-1E74F77B260F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B061E86F-BD1A-42F0-AE07-1E74F77B260F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B061E86F-BD1A-42F0-AE07-1E74F77B260F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
