@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Twilio;
 
 namespace aurm.notifier
 {
@@ -11,6 +12,7 @@ namespace aurm.notifier
     {
         public void Notify(Recipient rec, string message)
         {
+            TwilioRestClient trc = new TwilioRestClient("", "");
             throw new NotImplementedException();
         }
     }
