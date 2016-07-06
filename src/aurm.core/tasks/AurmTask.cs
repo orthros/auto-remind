@@ -10,7 +10,8 @@ namespace aurm.core.tasks
 {
     public class AurmTask
     {
-        public AurmTask(Guid uiD, Recipient recipient, TimeCondition timeCondition, List<ICondition> additionalConditions)
+        public AurmTask(Guid uiD, Recipient recipient, 
+                        TimeCondition timeCondition, List<ICondition> additionalConditions)
         {
             recipient.ThrowIfNull(nameof(recipient));
             timeCondition.ThrowIfNull(nameof(timeCondition));
@@ -20,6 +21,8 @@ namespace aurm.core.tasks
             Recipient = recipient;
             TimeCondition = timeCondition;
             AdditionalConditions = additionalConditions;
+
+            LastTriggeredTime = DateTime.MinValue;
         }
 
         public Guid UiD { get; private set; }
@@ -28,6 +31,8 @@ namespace aurm.core.tasks
         public TimeCondition TimeCondition { get; private set; }
 
         public List<ICondition> AdditionalConditions { get; private set; }
+
+        public DateTime LastTriggeredTime { get; set; }
 
     }
 }

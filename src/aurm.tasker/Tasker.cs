@@ -38,10 +38,15 @@ namespace aurm.tasker
         {
             Tasks.ForEach((task) =>
             {
-                if (task.TimeCondition.IsMet && task.AdditionalConditions.All(x => x.IsMet))
+                if (task.LastTriggeredTime < DateTime.Now.Date)
                 {
-                    //Raise our event
-                    OnTaskUpdated(task);
+                    //This task has not been trigered as of today
+                    if (task.TimeCondition.IsMet && task.AdditionalConditions.All(x => x.IsMet))
+                    {
+                        //Raise our event
+                        OnTaskUpdated(task);
+                        task.LastTriggeredTime = DateTime.Now;
+                    }
                 }
             });
         }
