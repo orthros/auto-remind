@@ -63,7 +63,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\src\auto-remind\aurm.core\aurm.core.csproj">
+    <ProjectReference Include="..\..\src\aurm.core\aurm.core.csproj">
       <Project>{ea7337af-0fe9-4b7b-93ed-f2a8ae740d4e}</Project>
       <Name>aurm.core</Name>
     </ProjectReference>

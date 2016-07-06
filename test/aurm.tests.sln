@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aurm.core.tests", "aurm.core.tests\aurm.core.tests.csproj", "{F35806BE-54EF-476F-9BF3-5551B7E460AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aurm.core", "..\..\src\auto-remind\aurm.core\aurm.core.csproj", "{EA7337AF-0FE9-4B7B-93ED-F2A8AE740D4E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aurm.core", "..\src\aurm.core\aurm.core.csproj", "{EA7337AF-0FE9-4B7B-93ED-F2A8AE740D4E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
