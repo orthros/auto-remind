@@ -57,6 +57,7 @@
     <Compile Include="tasks\TaskUpdatedEventArgs.cs" />
     <Compile Include="tasks\TimeCondition.cs" />
     <Compile Include="utilities\EnumUtil.cs" />
+    <Compile Include="utilities\PhoneUtils.cs" />
     <Compile Include="utilities\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
