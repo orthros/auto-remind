@@ -33,7 +33,7 @@ namespace aurm.tasker
 
         private void OurTimer_Elapsed(object sender, ElapsedEventArgs e)
         {
-            Tasks.ForEach((task) =>
+            Tasks?.ForEach((task) =>
             {
                 if (task.LastTriggeredTime < DateTime.Now.Date)
                 {
