@@ -49,8 +49,15 @@ namespace aurm.ui
         private void tasker_TaskUpdated(TaskUpdatedEventArgs e)
         {
             //Need to prompt the user then notify
+            var time = DateTime.Now;
+            var messageDialog = $"It is {time.DayOfWeek} at {time.ToShortTimeString()}, would you like to send a message to {e.RaisedTask.Recipient.Name}?";
+            var messageBoxResult = MessageBox.Show(messageDialog, "Confirm Notification", 
+                                                   MessageBoxButton.YesNo, MessageBoxImage.Exclamation);
 
-            this.Notifier.Notify(e.RaisedTask.Recipient, e.RaisedTask.Message);
+            if (messageBoxResult == MessageBoxResult.Yes)
+            {
+                this.Notifier.Notify(e.RaisedTask.Recipient, e.RaisedTask.Message);
+            }
         }
 
         private List<AurmTask> GetTasks()
@@ -76,6 +83,7 @@ namespace aurm.ui
                         using (var jtw = new JsonTextWriter(tw))
                         {
                             var jser = new JsonSerializer();
+                            //Needed to resolve the derived types (in particular the abstract class Recipient)
                             jser.TypeNameHandling = TypeNameHandling.All;
 
                             jser.Serialize(jtw, addT);
@@ -93,6 +101,7 @@ namespace aurm.ui
                     using (JsonTextReader jsonReader = new JsonTextReader(fileStrReader))
                     {
                         JsonSerializer jsonSer = new JsonSerializer();
+                        //Needed to resolve the derived types (in particular the abstract class Recipient)
                         jsonSer.TypeNameHandling = TypeNameHandling.All;
                               
                         var newTask = jsonSer.Deserialize<AurmTask>(jsonReader);
