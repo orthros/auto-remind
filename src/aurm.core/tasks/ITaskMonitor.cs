@@ -10,7 +10,7 @@ namespace aurm.core.tasks
 
     public interface ITaskMonitor
     {
-        void StartMonitoring();
+        void StartMonitoring(IEnumerable<AurmTask> tasks);
         event TaskUpdatedEvent TaskUpdated;
     }
 }

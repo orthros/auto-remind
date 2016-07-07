@@ -9,23 +9,20 @@ using aurm.core.utilities;
 
 namespace aurm.tasker
 {
-    public class Tasker :ITaskMonitor
+    public class Tasker : ITaskMonitor
     {
-        public Tasker(List<AurmTask> tasks)
-        {
-            tasks.ThrowIfNull(nameof(tasks));
-
-            Tasks = tasks;
-        }
-
         public event TaskUpdatedEvent TaskUpdated;
 
         private Timer OurTimer { get; set; }
 
         private List<AurmTask> Tasks { get; set; }
 
-        public void StartMonitoring()
+        public void StartMonitoring(IEnumerable<AurmTask> tasks)
         {
+            tasks.ThrowIfNull(nameof(tasks));
+
+            Tasks = tasks.ToList();
+
             //Timer on a One minute cycle
             //When it ticks, check all Tasks and if they are "complete" raise the TaskUpdatedEvent
             OurTimer = new Timer();
