@@ -43,12 +43,18 @@ namespace aurm.core.tasks
                     return false;
                 }
 
-                if (dtNow.Hour < this.HourOfDay && dtNow.Minute < this.MinuteOfDay)
+                if (dtNow.Hour < this.HourOfDay)
                 {
                     //Not quite yet!
                     return false;
                 }
 
+                if(dtNow.Minute < this.MinuteOfDay)
+                {
+                    //It is our hour, but not our time
+                    return false;
+                }
+                
                 return true;
             }
         }
